@@ -4,7 +4,7 @@ import { Header } from "../components/Header";
 
 export default function Home() {
   return (
-    <Flex w="100vw" direction="column" overflowX="hidden">
+    <Flex w="100vw" maxW="100%" direction="column" overflowX="hidden">
       <Flex
         w="100vw"
         h="100vh"
@@ -18,10 +18,10 @@ export default function Home() {
         <Flex w="100%" maxWidth={1440} mx="auto" my="auto" px="4" direction="column">
           <Stack spacing="2">
             <Text fontSize="5xl" lineHeight="48px">
-              Bem vindo,
+              Bem-vindos,
             </Text>
             <Text fontSize="7xl" fontWeight="500" lineHeight="74px">
-              Meu nome é Jean
+              Meu nome é Jean.
             </Text>
             <Text fontSize="lg" lineHeight="36px">
               Capturo momentos da vida através das minhas lentes 🤪
@@ -29,6 +29,7 @@ export default function Home() {
           </Stack>
         </Flex>
       </Flex>
+      <Flex>Page 2</Flex>
     </Flex>
   );
 }
