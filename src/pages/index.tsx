@@ -1,35 +1,13 @@
-import { Flex, Text, Stack } from "@chakra-ui/react";
+import { VStack } from "@chakra-ui/react";
 
-import { Header } from "../components/Header";
+import { HomePage } from "../components/Pages/HomePage";
+import { About } from "../components/Pages/About";
 
 export default function Home() {
   return (
-    <Flex w="100vw" maxW="100%" direction="column" overflowX="hidden">
-      <Flex
-        w="100vw"
-        h="100vh"
-        bgImage={"url('/images/background.jpg')"}
-        bgPosition={"50% 45%"}
-        bgRepeat="no-repeat"
-        direction="column"
-      >
-        <Header />
-
-        <Flex w="100%" maxWidth={1440} mx="auto" my="auto" px="4" direction="column">
-          <Stack spacing="2">
-            <Text fontSize="5xl" lineHeight="48px">
-              Bem-vindos,
-            </Text>
-            <Text fontSize="7xl" fontWeight="500" lineHeight="74px">
-              Meu nome é Jean.
-            </Text>
-            <Text fontSize="lg" lineHeight="36px">
-              Capturo momentos da vida através das minhas lentes 🤪
-            </Text>
-          </Stack>
-        </Flex>
-      </Flex>
-      <Flex>Page 2</Flex>
-    </Flex>
+    <VStack h="100vh" display="block" style={{ scrollSnapType: "y mandatory" }} overflowY="scroll">
+      <HomePage />
+      <About />
+    </VStack>
   );
 }

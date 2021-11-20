@@ -1,4 +1,4 @@
-import { Flex, Image, Text, HStack, Link } from "@chakra-ui/react";
+import { Flex, Image, HStack, Link } from "@chakra-ui/react";
 
 export function Header() {
   return (
@@ -13,14 +13,13 @@ export function Header() {
       align="center"
       justifyContent="space-between"
     >
-      <Image src="/images/logo.png" alt="Logo Quartzo Design" w={100} />
-      <Flex gap="20">
-        <HStack spacing="4" fontSize="lg">
+      <Image src="/images/logo.png" alt="Logo Quartzo Design" htmlWidth={112} />
+      <Flex>
+        <HStack spacing="6" fontSize="xl">
           <Link>Início</Link>
           <Link>Sobre</Link>
           <Link>Galeria</Link>
           <Link>Contato</Link>
-          <Link>Blog</Link>
         </HStack>
       </Flex>
     </Flex>
