@@ -17,13 +17,14 @@ export function HomePage() {
   return (
     <Flex
       h="100%"
-      px="4"
+      px="8"
       style={{ scrollSnapAlign: "center" }}
       direction="column"
       justifyContent="space-between"
       bgImage={"url('/images/background.jpg')"}
       bgPosition={"50% 45%"}
       bgRepeat="no-repeat"
+      id="home"
     >
       <Header />
 
@@ -39,7 +40,7 @@ export function HomePage() {
         </Stack>
       </Flex>
 
-      <Flex w="100%" maxWidth={1440} mx="auto" mb="4" direction="column">
+      <Flex w="100%" maxWidth={1440} mx="auto" mb="8" direction="column">
         <Icon as={FiChevronDown} w={8} h={8} animation={animation} />
       </Flex>
     </Flex>

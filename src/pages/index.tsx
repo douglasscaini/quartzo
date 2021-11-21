@@ -5,7 +5,12 @@ import { HomePage } from "../app/pages/HomePage";
 
 export default function Home() {
   return (
-    <VStack h="100vh" display="block" style={{ scrollSnapType: "y mandatory" }} overflowY="scroll">
+    <VStack
+      h="100vh"
+      display="block"
+      style={{ scrollSnapType: "y mandatory", scrollBehavior: "smooth" }}
+      overflowY="scroll"
+    >
       <HomePage />
       <About />
     </VStack>
