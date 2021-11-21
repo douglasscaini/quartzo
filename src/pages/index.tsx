@@ -1,7 +1,10 @@
 import { VStack } from "@chakra-ui/react";
 
-import { About } from "../app/pages/About";
 import { HomePage } from "../app/pages/HomePage";
+import { About } from "../app/pages/About";
+import { Gallery } from "../app/pages/Gallery";
+import { Contact } from "../app/pages/Contact";
+import { Footer } from "../app/pages/Footer";
 
 export default function Home() {
   return (
@@ -13,6 +16,9 @@ export default function Home() {
     >
       <HomePage />
       <About />
+      <Gallery />
+      <Contact />
+      <Footer />
     </VStack>
   );
 }
