@@ -12,7 +12,10 @@ export function Header() {
         maxWidth={1440}
         mx="auto"
       >
-        <Image src="/images/logo.png" alt="Logo Quartzo Design" htmlWidth={112} />
+        <Link href="#home">
+          <Image src="/images/logo.png" alt="Logo Quartzo Design" htmlWidth={112} />
+        </Link>
+
         <HStack spacing="6" fontSize="xl">
           <Link href="#home">Início</Link>
           <Link href="#about">Sobre</Link>
