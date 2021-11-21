@@ -8,8 +8,6 @@ export function Header() {
       maxWidth={1440}
       h="24"
       mx="auto"
-      mt="4"
-      px="4"
       align="center"
       justifyContent="space-between"
     >

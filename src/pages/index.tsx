@@ -1,7 +1,7 @@
 import { VStack } from "@chakra-ui/react";
 
-import { HomePage } from "../components/Pages/HomePage";
-import { About } from "../components/Pages/About";
+import { About } from "../app/pages/About";
+import { HomePage } from "../app/pages/HomePage";
 
 export default function Home() {
   return (
