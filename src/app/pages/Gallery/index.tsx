@@ -1,4 +1,7 @@
-import { Flex, HStack, Text } from "@chakra-ui/react";
+import { Flex, HStack } from "@chakra-ui/react";
+import { SlideSwiper } from "../../../components/SlideSwiper";
+
+import { photosAbout } from "../../../utils/photosAbout";
 
 export function Gallery() {
   return (
@@ -7,44 +10,28 @@ export function Gallery() {
       h="100%"
       w="100vw"
       background="#161616"
+      direction="column"
       style={{
         scrollSnapAlign: "center",
       }}
     >
-      <HStack w="100%" maxWidth={1440} mx="auto" my="auto" mt="24" id="photos" wrap="wrap">
-        <Flex
-          w="32%"
-          h="100px"
-          bgImage={"url('/images/background.jpg')"}
-          bgPosition={"50% 45%"}
-          bgRepeat="no-repeat"
-        />
-
-        <Flex
-          w="33%"
-          h="100px"
-          bgImage={"url('/images/background.jpg')"}
-          bgPosition={"50% 45%"}
-          bgRepeat="no-repeat"
-        />
-
-        <Flex
-          w="33%"
-          h="100px"
-          bgImage={"url('/images/background.jpg')"}
-          bgPosition={"50% 45%"}
-          bgRepeat="no-repeat"
-        />
-
-        <Flex
-          w="33%"
-          h="100px"
-          bgImage={"url('/images/background.jpg')"}
-          bgPosition={"50% 45%"}
-          bgRepeat="no-repeat"
-        />
-
-        <Text>oi</Text>
+      <HStack
+        w="100%"
+        h="100%"
+        maxWidth={1440}
+        mx="auto"
+        mt="20"
+        mb="5"
+        display="flex"
+        flexWrap="wrap"
+        justifyContent="space-between"
+      >
+        <SlideSwiper photos={photosAbout} height="380px" />
+        <SlideSwiper photos={photosAbout} height="380px" />
+        <SlideSwiper photos={photosAbout} height="380px" />
+        <SlideSwiper photos={photosAbout} height="380px" />
+        <SlideSwiper photos={photosAbout} height="380px" />
+        <SlideSwiper photos={photosAbout} height="380px" />
       </HStack>
     </Flex>
   );

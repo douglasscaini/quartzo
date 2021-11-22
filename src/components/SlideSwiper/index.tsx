@@ -4,79 +4,32 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { EffectCards } from "swiper";
 SwiperCore.use([EffectCards]);
 
-export function SlideSwiper() {
+type Photos = {
+  id: number;
+  src: string;
+};
+
+type SlideSwiperProps = {
+  photos: Photos[];
+  height: string;
+};
+
+export function SlideSwiper({ photos, height }: SlideSwiperProps) {
   return (
-    <Flex w="35%" h="480px" className="swiper-card">
+    <Flex w="32%" h={height}>
       <Swiper effect={"cards"} grabCursor={true} initialSlide={3}>
-        <SwiperSlide>
-          <Flex
-            w="100%"
-            h="480px"
-            bgImage={`url('/images/quartzo/jean_1.jpg')`}
-            bgSize="cover"
-            bgPosition="center"
-            borderRadius="18px"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Flex
-            w="100%"
-            h="480px"
-            bgImage={`url('/images/quartzo/jean_2.jpg')`}
-            bgSize="cover"
-            bgPosition="center"
-            borderRadius="18px"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Flex
-            w="100%"
-            h="480px"
-            bgImage={`url('/images/quartzo/jean_3.jpg')`}
-            bgSize="cover"
-            bgPosition="center"
-            borderRadius="18px"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Flex
-            w="100%"
-            h="480px"
-            bgImage={`url('/images/quartzo/jean_4.jpg')`}
-            bgSize="cover"
-            bgPosition="center"
-            borderRadius="18px"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Flex
-            w="100%"
-            h="480px"
-            bgImage={`url('/images/quartzo/jean_5.jpg')`}
-            bgSize="cover"
-            bgPosition="center"
-            borderRadius="18px"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Flex
-            w="100%"
-            h="480px"
-            bgImage={`url('/images/quartzo/jean_6.jpg')`}
-            bgSize="cover"
-            borderRadius="18px"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Flex
-            w="100%"
-            h="480px"
-            bgImage={`url('/images/quartzo/jean_7.jpg')`}
-            bgSize="cover"
-            bgPosition="center"
-            borderRadius="18px"
-          />
-        </SwiperSlide>
+        {photos.map((photo) => (
+          <SwiperSlide key={photo.id}>
+            <Flex
+              w="100%"
+              h={height}
+              bgImage={photo.src}
+              bgSize="cover"
+              bgPosition="center"
+              borderRadius="18px"
+            />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </Flex>
   );

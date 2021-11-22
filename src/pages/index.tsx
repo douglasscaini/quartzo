@@ -31,8 +31,8 @@ export default function Home() {
         <HomePage />
         <About />
         <Gallery />
-        {/* <Contact /> */}
-        {/* <Footer /> */}
+        <Contact />
+        <Footer />
       </VStack>
     </>
   );

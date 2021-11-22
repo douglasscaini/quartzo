@@ -2,6 +2,8 @@ import { Flex, Text, HStack, Stack, Link } from "@chakra-ui/react";
 
 import { SlideSwiper } from "../../../components/SlideSwiper";
 
+import { photosAbout } from "../../../utils/photosAbout";
+
 export function About() {
   return (
     <Flex
@@ -12,8 +14,8 @@ export function About() {
         scrollSnapAlign: "center",
       }}
     >
-      <HStack w="100%" maxWidth={1440} mx="auto" mt="24">
-        <SlideSwiper />
+      <HStack w="100%" maxWidth={1440} mx="auto" justifyContent="space-between">
+        <SlideSwiper photos={photosAbout} height="480px" />
 
         <Flex w="65%" direction="column">
           <Stack spacing="8" ml="8">
@@ -41,7 +43,12 @@ export function About() {
 
             <Text fontSize="lg" align="justify">
               Me formei Bacharel em Design e em meio a tanto aprendizado criei a{" "}
-              <Link href="https://www.instagram.com/quartzo_design/" isExternal>
+              <Link
+                href="https://www.instagram.com/quartzo_design/"
+                isExternal
+                fontWeight="500"
+                color="#ff57b2"
+              >
                 Quartzo Design
               </Link>
               , uma empresa prestadora de serviço em todo o Sul do Brasil, com 2 anos de mercado,
