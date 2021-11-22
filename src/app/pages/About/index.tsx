@@ -20,7 +20,7 @@ export function About() {
         <Flex w="65%" direction="column">
           <Stack spacing="8" ml="8">
             <Text fontSize="5xl" fontWeight="500">
-              Olá
+              Olá 👋
             </Text>
 
             <Text fontSize="lg" align="justify">
