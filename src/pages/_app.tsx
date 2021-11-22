@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/bundle";
-import "../styles/slide.scss";
+import "../styles/slideCard.scss";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

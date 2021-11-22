@@ -6,7 +6,7 @@ SwiperCore.use([EffectCards]);
 
 export function SlideSwiper() {
   return (
-    <Flex w="35%" h="480px">
+    <Flex w="35%" h="480px" className="swiper-card">
       <Swiper effect={"cards"} grabCursor={true} initialSlide={3}>
         <SwiperSlide>
           <Flex
