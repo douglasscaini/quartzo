@@ -4,7 +4,14 @@ import { SlideSwiper } from "../../../components/SlideSwiper";
 
 export function About() {
   return (
-    <Flex h="100%" style={{ scrollSnapAlign: "center" }} id="about">
+    <Flex
+      id="about"
+      h="100%"
+      w="100vw"
+      style={{
+        scrollSnapAlign: "center",
+      }}
+    >
       <HStack w="100%" maxWidth={1440} mx="auto" mt="24">
         <SlideSwiper />
 

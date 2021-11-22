@@ -1,7 +1,5 @@
 import { Flex, Text, Stack, Icon, keyframes, usePrefersReducedMotion } from "@chakra-ui/react";
 
-import { Header } from "../../../components/Header";
-
 import { FiChevronDown } from "react-icons/fi";
 
 const bounceArrowAnimated = keyframes`
@@ -16,19 +14,18 @@ export function HomePage() {
 
   return (
     <Flex
+      id="home"
       h="100%"
-      px="8"
-      style={{ scrollSnapAlign: "center" }}
+      w="100vw"
       direction="column"
-      justifyContent="space-between"
       bgImage={"url('/images/background.jpg')"}
       bgPosition={"50% 45%"}
       bgRepeat="no-repeat"
-      id="home"
+      style={{
+        scrollSnapAlign: "center",
+      }}
     >
-      <Header />
-
-      <Flex w="100%" maxWidth={1440} mx="auto">
+      <Flex w="100%" maxWidth={1440} mx="auto" my="auto">
         <Stack>
           <Text fontSize="5xl" lineHeight="48px">
             Bem-vindos,

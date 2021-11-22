@@ -2,15 +2,17 @@ import { Flex, Image, HStack, Link } from "@chakra-ui/react";
 
 export function Header() {
   return (
-    <Flex as="header" h="24" position="sticky" top="0" left="0" right="0" bottom="0">
+    <Flex w="100vw" position="sticky" zIndex="9">
       <Flex
+        h="24"
+        maxWidth={1440}
         position="fixed"
+        mx="auto"
         top="0"
         left="0"
         right="0"
+        bottom="0"
         justifyContent="space-between"
-        maxWidth={1440}
-        mx="auto"
       >
         <Link href="#home">
           <Image src="/images/logo.png" alt="Logo Quartzo Design" htmlWidth={112} />
