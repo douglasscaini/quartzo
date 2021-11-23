@@ -2,7 +2,7 @@ import { Flex, Text, Stack, Icon, keyframes, usePrefersReducedMotion } from "@ch
 
 import { FiChevronDown } from "react-icons/fi";
 
-const bounceArrowAnimated = keyframes`
+const arrowIconAnimation = keyframes`
   0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
   40% { transform: translateY(-20px); }
   60% { transform: translateY(-10px); }
@@ -10,13 +10,13 @@ const bounceArrowAnimated = keyframes`
 
 export function HomePage() {
   const prefersReducedMotion = usePrefersReducedMotion();
-  const animation = prefersReducedMotion ? undefined : `${bounceArrowAnimated} 2s infinite`;
+  const animation = prefersReducedMotion ? undefined : `${arrowIconAnimation} 2s infinite`;
 
   return (
     <Flex
       id="home"
-      h="100%"
       w="100vw"
+      h="100%"
       direction="column"
       bgImage={"url('/images/background.jpg')"}
       bgPosition={"50% 45%"}
@@ -25,7 +25,7 @@ export function HomePage() {
         scrollSnapAlign: "center",
       }}
     >
-      <Flex w="100%" maxWidth={1440} mx="auto" my="auto">
+      <Flex w="100%" maxWidth={1440} mx="auto" my="auto" direction="column">
         <Stack>
           <Text fontSize="5xl" lineHeight="48px">
             Bem-vindos,
@@ -37,7 +37,7 @@ export function HomePage() {
         </Stack>
       </Flex>
 
-      <Flex w="100%" maxWidth={1440} mx="auto" mb="8" direction="column">
+      <Flex w="100%" maxWidth={1440} mx="auto" mb="6">
         <Icon as={FiChevronDown} w={8} h={8} animation={animation} />
       </Flex>
     </Flex>

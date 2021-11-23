@@ -19,8 +19,8 @@ export function Contact() {
   return (
     <Flex
       id="contact"
-      h="100%"
       w="100vw"
+      h="100%"
       direction="column"
       style={{
         scrollSnapAlign: "center",

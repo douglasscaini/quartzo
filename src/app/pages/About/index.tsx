@@ -8,8 +8,8 @@ export function About() {
   return (
     <Flex
       id="about"
-      h="100%"
       w="100vw"
+      h="100%"
       style={{
         scrollSnapAlign: "center",
       }}
