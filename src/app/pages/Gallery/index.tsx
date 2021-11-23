@@ -1,4 +1,4 @@
-import { Flex, HStack, Wrap, WrapItem, Center, Image } from "@chakra-ui/react";
+import { Flex, Wrap, WrapItem, Image } from "@chakra-ui/react";
 
 import { photosGallery } from "../../../utils/photosGallery";
 
@@ -12,15 +12,15 @@ export function Gallery() {
         scrollSnapAlign: "center",
       }}
     >
-      <Wrap w="100vw" h="100vh" spacing="0" zIndex="1">
+      <Wrap w="100vw" h="100vh" spacing="0">
         {photosGallery.map((photo) => (
           <WrapItem
             key={photo.id}
             w="20vw"
             _hover={{
               opacity: ".7",
-              transform: "scale3d(1.05,1.05,1)",
-              transition: "all .4s 0s cubic-bezier(.7,0,.3,1)",
+              transform: "scale3d(1.05, 1.05, 1)",
+              transition: "all .4s cubic-bezier(.7,0,.3,1)",
               cursor: "pointer",
             }}
           >
