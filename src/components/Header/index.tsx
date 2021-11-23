@@ -2,7 +2,7 @@ import { Flex, Image, HStack, Link } from "@chakra-ui/react";
 
 export function Header() {
   return (
-    <Flex w="100vw" position="sticky" zIndex="9">
+    <Flex w="100vw" position="sticky" zIndex="2">
       <Flex
         h="24"
         maxWidth={1440}
