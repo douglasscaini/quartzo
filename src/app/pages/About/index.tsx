@@ -15,7 +15,7 @@ export function About() {
       }}
     >
       <HStack w="100%" maxWidth={1440} mx="auto" justifyContent="space-between">
-        <SlideSwiper photos={photosAbout} height="480px" />
+        <SlideSwiper photos={photosAbout} />
 
         <Flex w="65%" direction="column">
           <Stack spacing="8" ml="8">
@@ -34,15 +34,15 @@ export function About() {
 
             <Text fontSize="lg" align="justify">
               Na faculdade, o tempo era curto. Os professores ensinavam apenas o básico de cada
-              matéria e sempre deixavam aquele gostinho de “quero mais”. Resolvi me aprofundar na
-              área de fotografia com cursos online e dicas de outros profissionais, como o professor
-              Jameson Boscari, que me mostrou a porta de entrada da fotografia, o filmmaker Gustavo
-              Bahr e minha colega Vanessa Rizi. Também, meus pais, meus amigos e várias outras
-              pessoas fizeram eu me tornar quem sou hoje.
+              matéria e sempre deixavam “aquele gostinho de quero mais”. Decidi, então, me
+              aprofundar na área de fotografia com cursos online e dicas de outros profissionais,
+              como o professor Jameson Boscari, que me mostrou a porta de entrada da fotografia, o
+              filmmaker Gustavo Bahr e minha colega Vanessa Rizi. Além disso, meus pais, meus amigos
+              e várias outras pessoas fizeram eu me tornar quem sou hoje.
             </Text>
 
             <Text fontSize="lg" align="justify">
-              Me formei Bacharel em Design e em meio a tanto aprendizado criei a{" "}
+              Atualmente sou formado em Design e sou fotógrafo. Criei também a{" "}
               <Link
                 href="https://www.instagram.com/quartzo_design/"
                 isExternal
@@ -51,8 +51,8 @@ export function About() {
               >
                 Quartzo Design
               </Link>
-              , uma empresa prestadora de serviço em todo o Sul do Brasil, com 2 anos de mercado,
-              especializada em fotografias ao ar livre e que compartilha com você um pouco dos
+              , uma empresa que presta serviço em todo o Sul do Brasil, com 2 anos de mercado,
+              especializada em fotografia ao ar livre e que compartilha com você um pouco dos
               cliques que faz em um mundo cheio de loucuras.
             </Text>
           </Stack>

@@ -11,22 +11,21 @@ type Photos = {
 
 type SlideSwiperProps = {
   photos: Photos[];
-  height: string;
 };
 
-export function SlideSwiper({ photos, height }: SlideSwiperProps) {
+export function SlideSwiper({ photos }: SlideSwiperProps) {
   return (
-    <Flex w="32%" h={height}>
+    <Flex w="35%" h="496px">
       <Swiper effect={"cards"} grabCursor={true} initialSlide={3}>
         {photos.map((photo) => (
           <SwiperSlide key={photo.id}>
             <Flex
               w="100%"
-              h={height}
+              h="496px"
               bgImage={photo.src}
               bgSize="cover"
               bgPosition="center"
-              borderRadius="18px"
+              borderRadius="16px"
             />
           </SwiperSlide>
         ))}
