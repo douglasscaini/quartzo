@@ -4,13 +4,14 @@ import {
   Box,
   VStack,
   SimpleGrid,
-  Input,
   Textarea,
   Button,
   Icon,
   HStack,
   Square,
 } from "@chakra-ui/react";
+
+import { Input } from "../../../components/Form/Input";
 
 import { FiMail, FiNavigation, FiPhoneCall, FiFacebook, FiInstagram } from "react-icons/fi";
 import { AiOutlineWhatsApp } from "react-icons/ai";
@@ -26,14 +27,14 @@ export function Contact() {
         scrollSnapAlign: "center",
       }}
     >
-      <Flex w="100%" maxWidth={1440} mx="auto" my="auto" direction="column">
+      <Flex w="100%" maxWidth={1440} mx="auto" mt="32" direction="column">
         <Box
           w="100%"
           my="auto"
           mx="auto"
-          maxWidth={990}
+          maxWidth={992}
           background="#161616"
-          borderRadius="18px"
+          borderRadius="16px"
           padding="10"
         >
           <VStack spacing="10">
@@ -41,17 +42,32 @@ export function Contact() {
               Entre em contato 💬
             </Text>
 
-            <SimpleGrid minChildWidth="240px" spacing="8" w="100%">
+            <SimpleGrid w="100%" minChildWidth="240px" spacing="10">
               <Input name="name" type="text" placeholder="Nome" />
               <Input name="email" type="email" placeholder="E-mail" />
             </SimpleGrid>
-            <SimpleGrid minChildWidth="240px" spacing="8" w="100%">
-              <Textarea placeholder="Mensagem" />
+
+            <SimpleGrid w="100%" minChildWidth="240px">
+              <Textarea
+                name="message"
+                placeholder="Mensagem"
+                focusBorderColor="white"
+                variant="filled"
+                resize="none"
+                height="100px"
+                bgColor="#121212"
+                _placeholder={{
+                  color: "white",
+                }}
+                _hover={{
+                  bgColor: "#121212",
+                }}
+              />
             </SimpleGrid>
 
-            <Flex>
-              <Button>Enviar Mensagem</Button>
-            </Flex>
+            <Button type="submit" colorScheme="pink">
+              Enviar Mensagem
+            </Button>
           </VStack>
         </Box>
 
@@ -78,7 +94,7 @@ export function Contact() {
               E-mail
             </Text>
             <Text fontSize="md" mt="2">
-              jean-c-z@hotmail.com
+              quartzocn@gmail.com
             </Text>
           </Flex>
 
@@ -103,11 +119,10 @@ export function Contact() {
             </Text>
           </Flex>
         </Flex>
-      </Flex>
-
-      <Flex alignItems="center" justifyContent="center" direction="column" mb="4">
-        <Text>© Copyright 2022. Todos os direitos reservados.</Text>
-        <Text mx="auto">Feito com ❤️ by Douglas Scaini</Text>
+        <Flex alignItems="center" justifyContent="center" direction="column" mb="4">
+          <Text>© Copyright 2022. Todos os direitos reservados.</Text>
+          <Text mx="auto">Feito com ❤️ by Douglas Scaini</Text>
+        </Flex>
       </Flex>
     </Flex>
   );

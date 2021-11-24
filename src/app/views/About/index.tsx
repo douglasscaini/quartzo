@@ -47,7 +47,7 @@ export function About() {
                 href="https://www.instagram.com/quartzo_design/"
                 isExternal
                 fontWeight="500"
-                color="#ff57b2"
+                color="pink.500"
               >
                 Quartzo Design
               </Link>
