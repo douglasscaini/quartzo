@@ -8,6 +8,7 @@ import {
   Icon,
   HStack,
   Square,
+  Link,
 } from "@chakra-ui/react";
 
 import { Input } from "../../../components/Form/Input";
@@ -26,6 +27,7 @@ export function Contact() {
       style={{
         scrollSnapAlign: "center",
       }}
+      justifyContent="space-between"
     >
       <Flex w="100%" maxWidth={1440} mx="auto" mt="32" direction="column">
         <Box
@@ -56,58 +58,66 @@ export function Contact() {
           </VStack>
         </Box>
 
-        <Flex alignItems="center" justifyContent="center" direction="column" mb="4">
-          <Text>Fale comigo nas redes sociais</Text>
+        <VStack mt="10" spacing="4">
+          <Text fontSize="lg">Fale comigo nas redes sociais...</Text>
 
-          <HStack>
-            <Square size="40px" bg="tomato" color="white">
-              <Icon as={FiFacebook} w={6} h={6} />
-            </Square>
-            <Square size="40px" bg="purple.700" color="white">
-              <Icon as={FiInstagram} w={6} h={6} />
-            </Square>
-            <Square size="40px" bg="purple.700" color="white">
-              <Icon as={AiOutlineWhatsApp} w={6} h={6} />
-            </Square>
+          <HStack spacing="4">
+            <Link href="https://www.facebook.com/quartzodesign1622/" isExternal>
+              <Square size="48px" bgColor="#4267B2" borderRadius="4px">
+                <Icon as={FiFacebook} w={8} h={8} />
+              </Square>
+            </Link>
+
+            <Link href="https://www.instagram.com/quartzo_design/" isExternal>
+              <Square size="48px" bgColor="#C13584" borderRadius="4px">
+                <Icon as={FiInstagram} w={8} h={8} />
+              </Square>
+            </Link>
+
+            <Link
+              href="https://api.whatsapp.com/send?phone=554991661452&text=Ol%C3%A1,%20tudo%20bem?"
+              isExternal
+            >
+              <Square size="48px" bgColor="#25D366" borderRadius="4px">
+                <Icon as={AiOutlineWhatsApp} w={8} h={8} />
+              </Square>
+            </Link>
           </HStack>
-        </Flex>
+        </VStack>
 
-        <Flex mt="8" justifyContent="space-between" gridGap="32">
-          <Flex w="100%" h="200px" alignItems="center" justifyContent="center" direction="column">
+        <HStack justifyContent="space-between" mt="14">
+          <Flex w="200px" direction="column" align="center">
             <Icon as={FiMail} w={8} h={8} />
-            <Text fontSize="lg" mt="4" fontWeight="500">
+            <Text fontSize="lg" fontWeight="500" mt="4">
               E-mail
             </Text>
-            <Text fontSize="md" mt="2">
-              quartzocn@gmail.com
-            </Text>
+            <Text fontSize="md">quartzocn@gmail.com</Text>
           </Flex>
 
-          <Flex w="100%" h="200px" alignItems="center" justifyContent="center" direction="column">
+          <Flex w="200px" direction="column" align="center">
             <Icon as={FiPhoneCall} w={8} h={8} />
-            <Text fontSize="lg" fontWeight="500" mt="4">
+            <Text fontSize="lg" mt="4" fontWeight="500">
               Telefone
             </Text>
-            <Text fontSize="md" mt="2">
-              (49) 99166-1452
-            </Text>
+            <Text fontSize="md">(49) 99166-1452</Text>
           </Flex>
 
-          <Flex w="100%" h="200px" alignItems="center" justifyContent="center" direction="column">
+          <Flex w="200px" direction="column" align="center">
             <Icon as={FiNavigation} w={8} h={8} />
-            <Text fontSize="lg" fontWeight="500" mt="4">
+            <Text fontSize="lg" mt="4" fontWeight="500">
               Endereço
             </Text>
-            <Text maxW="300px" fontSize="md" mt="2" textAlign="justify">
-              R. Santo Amaro da Imperatriz, n.º 73, Bairro Nossa Senhora Aparecida, Campos Novos -
-              SC, 89620-000
-            </Text>
+            <Text fontSize="md">Campos Novos - SC</Text>
           </Flex>
-        </Flex>
-        <Flex alignItems="center" justifyContent="center" direction="column" mb="4">
-          <Text>© Copyright 2022. Todos os direitos reservados.</Text>
-          <Text mx="auto">Feito com ❤️ by Douglas Scaini</Text>
-        </Flex>
+        </HStack>
+      </Flex>
+
+      <Flex alignItems="center" justifyContent="center" direction="column" mx="auto" mb="2">
+        <Text fontSize="sm">© Copyright 2022. Todos os direitos reservados.</Text>
+        <Text fontSize="sm">
+          Feito com ❤️ by {""}
+          <Link href="https://www.linkedin.com/in/douglasscaini/">Douglas Scaini</Link>
+        </Text>
       </Flex>
     </Flex>
   );
