@@ -4,7 +4,6 @@ import {
   Box,
   VStack,
   SimpleGrid,
-  Textarea,
   Button,
   Icon,
   HStack,
@@ -12,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 
 import { Input } from "../../../components/Form/Input";
+import { Textarea } from "../../../components/Form/Textarea";
 
 import { FiMail, FiNavigation, FiPhoneCall, FiFacebook, FiInstagram } from "react-icons/fi";
 import { AiOutlineWhatsApp } from "react-icons/ai";
@@ -30,7 +30,6 @@ export function Contact() {
       <Flex w="100%" maxWidth={1440} mx="auto" mt="32" direction="column">
         <Box
           w="100%"
-          my="auto"
           mx="auto"
           maxWidth={992}
           background="#161616"
@@ -42,28 +41,14 @@ export function Contact() {
               Entre em contato 💬
             </Text>
 
-            <SimpleGrid w="100%" minChildWidth="240px" spacing="10">
-              <Input name="name" type="text" placeholder="Nome" />
-              <Input name="email" type="email" placeholder="E-mail" />
-            </SimpleGrid>
+            <VStack w="100%" spacing="4">
+              <SimpleGrid w="100%" minChildWidth="240px" spacing="4">
+                <Input name="name" type="text" placeholder="Nome" />
+                <Input name="email" type="email" placeholder="E-mail" />
+              </SimpleGrid>
 
-            <SimpleGrid w="100%" minChildWidth="240px">
-              <Textarea
-                name="message"
-                placeholder="Mensagem"
-                focusBorderColor="white"
-                variant="filled"
-                resize="none"
-                height="100px"
-                bgColor="#121212"
-                _placeholder={{
-                  color: "white",
-                }}
-                _hover={{
-                  bgColor: "#121212",
-                }}
-              />
-            </SimpleGrid>
+              <Textarea name="message" placeholder="Mensagem" />
+            </VStack>
 
             <Button type="submit" colorScheme="pink">
               Enviar Mensagem
