@@ -14,16 +14,16 @@ export function About() {
         scrollSnapAlign: "center",
       }}
     >
-      <HStack w="100%" maxWidth={1440} mx="auto" justifyContent="space-between">
+      <HStack w="100%" maxWidth={1680} mx="auto" justifyContent="space-between">
         <SlideSwiper photos={photosAbout} />
 
         <Flex w="65%" direction="column">
           <Stack spacing="8" ml="8">
             <Text fontSize="5xl" fontWeight="500">
-              Olá 👋
+              Olá 📸
             </Text>
 
-            <Text fontSize="lg" align="justify">
+            <Text fontSize="lg" fontWeight="300" align="justify">
               Nasci em 1997, na cidade de Campos Novos, Santa Catarina. Com meus 18 anos parei para
               pensar: “Eu preciso fazer algo diferente da minha vida. Eu acredito que meu propósito
               na Terra não é isso que eu estou vivendo”. Com isso em mente, comecei a estudar Design
@@ -47,7 +47,7 @@ export function About() {
                 href="https://www.instagram.com/quartzo_design/"
                 isExternal
                 fontWeight="500"
-                color="pink.500"
+                color="#805AD5"
               >
                 Quartzo Design
               </Link>

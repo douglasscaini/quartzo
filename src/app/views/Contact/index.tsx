@@ -9,6 +9,7 @@ import {
   HStack,
   Square,
   Link,
+  Image,
 } from "@chakra-ui/react";
 
 import { Input } from "../../../components/Form/Input";
@@ -52,13 +53,13 @@ export function Contact() {
               <Textarea name="message" placeholder="Mensagem" />
             </VStack>
 
-            <Button type="submit" colorScheme="pink">
+            <Button type="submit" colorScheme="purple">
               Enviar Mensagem
             </Button>
           </VStack>
         </Box>
 
-        <VStack mt="10" spacing="4">
+        {/* <VStack mt="10" spacing="4">
           <Text fontSize="lg">Fale comigo nas redes sociais...</Text>
 
           <HStack spacing="4">
@@ -83,7 +84,7 @@ export function Contact() {
               </Square>
             </Link>
           </HStack>
-        </VStack>
+        </VStack> */}
 
         <HStack justifyContent="space-between" mt="14">
           <Flex w="200px" direction="column" align="center">
@@ -103,11 +104,9 @@ export function Contact() {
           </Flex>
 
           <Flex w="200px" direction="column" align="center">
-            <Icon as={FiNavigation} w={8} h={8} />
-            <Text fontSize="lg" mt="4" fontWeight="500">
-              Endereço
-            </Text>
-            <Text fontSize="md">Campos Novos - SC</Text>
+            <Image src="/images/qrcode.png" w="120px" />
+
+            <Text fontSize="md">Fale comigo no Whats</Text>
           </Flex>
         </HStack>
       </Flex>

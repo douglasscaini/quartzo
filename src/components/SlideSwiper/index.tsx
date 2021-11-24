@@ -25,7 +25,7 @@ export function SlideSwiper({ photos }: SlideSwiperProps) {
               bgImage={photo.src}
               bgSize="cover"
               bgPosition="center"
-              borderRadius="16px"
+              borderRadius="4px"
             />
           </SwiperSlide>
         ))}

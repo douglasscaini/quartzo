@@ -1,4 +1,14 @@
-import { Flex, Text, Stack, Icon, keyframes, usePrefersReducedMotion } from "@chakra-ui/react";
+import {
+  Flex,
+  Text,
+  Stack,
+  Icon,
+  HStack,
+  Divider,
+  Link,
+  keyframes,
+  usePrefersReducedMotion,
+} from "@chakra-ui/react";
 
 import { FiChevronDown } from "react-icons/fi";
 
@@ -19,26 +29,47 @@ export function HomePage() {
       h="100%"
       direction="column"
       bgImage={"url('/images/background.jpg')"}
-      bgPosition={"50% 45%"}
+      bgPosition="center"
+      bgSize="cover"
       bgRepeat="no-repeat"
       style={{
         scrollSnapAlign: "center",
       }}
     >
-      <Flex w="100%" maxWidth={1440} mx="auto" my="auto" direction="column">
-        <Stack>
-          <Text fontSize="5xl" lineHeight="48px">
-            Bem-vindos,
+      <Flex w="100%" maxW={1680} mx="auto" my="auto" direction="column">
+        <Stack ml="64" spacing="8">
+          <Text fontSize="7xl" fontWeight="500" pl="10">
+            Quartzo Design
           </Text>
-          <Text fontSize="7xl" fontWeight="500" lineHeight="96px">
-            Meu nome é Jean.
-          </Text>
-          <Text fontSize="xl">Capturo momentos da vida através das minhas lentes 🤪</Text>
+
+          <Divider w={160} />
+
+          <Flex fontSize="sm" fontWeight="300" direction="column" pl="10" lineHeight="8">
+            <Text>Guardar os momentos com toda sua emoção e</Text>
+            <Text>reviver com toda a intensidade. Está é a arte de fotografar...</Text>
+          </Flex>
         </Stack>
       </Flex>
 
-      <Flex w="100%" maxWidth={1440} mx="auto" mb="6">
+      <Flex w="100%" maxW={1680} mx="auto" mb="8" align="center" justify="space-between">
         <Icon as={FiChevronDown} w={8} h={8} animation={animation} />
+
+        <HStack fontSize="md" spacing="8">
+          <Link href="https://www.facebook.com/quartzocn/" isExternal>
+            <Text>Facebook</Text>
+          </Link>
+
+          <Link href="https://www.instagram.com/quartzo_design/" isExternal>
+            <Text>Instagram</Text>
+          </Link>
+
+          <Link
+            href="https://api.whatsapp.com/send?phone=554991661452&text=Ol%C3%A1,%20tudo%20bem?"
+            isExternal
+          >
+            <Text>Whatsapp</Text>
+          </Link>
+        </HStack>
       </Flex>
     </Flex>
   );
