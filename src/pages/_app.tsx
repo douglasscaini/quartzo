@@ -3,12 +3,6 @@ import { ChakraProvider } from "@chakra-ui/react";
 
 import { theme } from "../styles/theme";
 
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import "swiper/css/bundle";
-import "../styles/slide.scss";
-
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
