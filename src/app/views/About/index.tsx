@@ -17,7 +17,12 @@ export function About() {
 
         <HStack w="100%" h="100%" justify="center" spacing="24" mt="12">
           <Flex w={420} h={560} position="relative">
-            <Image src="/images/quartzo/jean.jpg" alt="Foto do proprietário" borderRadius={4} />
+            <Image
+              src="/images/quartzo/jean.jpg"
+              alt="Foto do proprietário"
+              borderRadius={4}
+              opacity=".9"
+            />
 
             <Image
               src="/images/dots10x.png"
@@ -42,8 +47,8 @@ export function About() {
 
           <Flex w={575} h={560} align="center">
             <Flex direction="column">
-              <Text fontSize="5xl" fontWeight="300" lineHeight="shorter" mb="10">
-                Beginning of a photographer's career.
+              <Text fontSize="5xl" fontWeight="500" lineHeight="shorter" mb="10">
+                Sobre a Quartzo
               </Text>
 
               <Flex position="relative">
@@ -51,12 +56,14 @@ export function About() {
               </Flex>
 
               <Text fontSize="lg" fontWeight="300" align="justify" pl="20">
-                The world of design is ruled by diversity, and it’s good. Another question is
-                whether to consider a lot of pieces of furniture as trash. That’s it is this
-                responsibility — to create things, not junk, — lies on the designer and the
-                company-manufacturer. Bad architecture is even more harmful. If you make an ugly,
-                uncomfortable and expensive chair, then it will be forgotten very quickly, but if
-                you build a terrible building — it will stay for twenty years and make many unhappy.
+                Concretizar sonhos. Com muito amor, carinho e dedicação estamos sempre comprometidos
+                em fazer do seu dia, o dia mais especial, lindo e incrível! Criamos experiências e
+                entregamos memórias, estas mesmas que serão eternamente guardadas através de um
+                trabalho moderno, autoral e cheio de sentimento e dedicação. Somos apaixonadamente
+                loucos pelo o que fazemos. Nós identificamos com nossos clientes, mergulhamos juntos
+                na imensidão dos sentimentos vividos antes e no dia do evento. Nós emocionamos
+                juntos, rimos juntos e fazemos que o trabalho entregue seja totalmente personalizado
+                traduzindo o perfil de cada um de nossos clientes.
               </Text>
             </Flex>
           </Flex>

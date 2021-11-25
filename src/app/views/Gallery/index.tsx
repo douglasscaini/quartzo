@@ -15,7 +15,17 @@ export function Gallery() {
       <Wrap w="100vw" h="100vh" spacing="0">
         {photos.map((photo) => (
           <WrapItem key={photo.id}>
-            <Image src={photo.src} w="20vw" h="50vh" objectFit="cover" />
+            <Image
+              src={photo.src}
+              w="20vw"
+              h="50vh"
+              objectFit="cover"
+              opacity=".9"
+              _hover={{
+                cursor: "pointer",
+                opacity: "0.5",
+              }}
+            />
           </WrapItem>
         ))}
       </Wrap>

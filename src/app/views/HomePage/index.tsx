@@ -46,8 +46,8 @@ export function HomePage() {
 
           <Flex fontSize="sm" fontWeight="300" lineHeight="8" direction="column" pl="10">
             <Text maxW={424} align="justify">
-              "Guardar os momentos com toda sua emoção e reviver com toda a intensidade. Está é a
-              arte de fotografar!"
+              Somos muito mais do que uma empresa de fotografia. Nós capturamos emoções, carinho,
+              olhares, sensibilidade, detalhes e ,claro, o AMOR.
             </Text>
           </Flex>
         </Stack>
