@@ -1,8 +1,4 @@
-import { Flex, Text, HStack, Stack, Link } from "@chakra-ui/react";
-
-import { SlideSwiper } from "../../../components/SlideSwiper";
-
-import { photosAbout } from "../../../utils/photosAbout";
+import { Flex, Text, HStack, Image, Divider } from "@chakra-ui/react";
 
 export function About() {
   return (
@@ -14,50 +10,58 @@ export function About() {
         scrollSnapAlign: "center",
       }}
     >
-      <HStack w="100%" maxWidth={1680} mx="auto" justifyContent="space-between">
-        <SlideSwiper photos={photosAbout} />
-
-        <Flex w="65%" direction="column">
-          <Stack spacing="8" ml="8">
-            <Text fontSize="5xl" fontWeight="500">
-              Olá 📸
-            </Text>
-
-            <Text fontSize="lg" fontWeight="300" align="justify">
-              Nasci em 1997, na cidade de Campos Novos, Santa Catarina. Com meus 18 anos parei para
-              pensar: “Eu preciso fazer algo diferente da minha vida. Eu acredito que meu propósito
-              na Terra não é isso que eu estou vivendo”. Com isso em mente, comecei a estudar Design
-              na Universidade do Oeste de Santa Catarina e obtive muito conhecimento. Aprendi
-              técnicas de desenho, criação de identidade visual, edição em softwares, modelagem 3D,
-              estratégias de marketing e algo que me chamou muito atenção, a fotografia.
-            </Text>
-
-            <Text fontSize="lg" align="justify">
-              Na faculdade, o tempo era curto. Os professores ensinavam apenas o básico de cada
-              matéria e sempre deixavam “aquele gostinho de quero mais”. Decidi, então, me
-              aprofundar na área de fotografia com cursos online e dicas de outros profissionais,
-              como o professor Jameson Boscari, que me mostrou a porta de entrada da fotografia, o
-              filmmaker Gustavo Bahr e minha colega Vanessa Rizi. Além disso, meus pais, meus amigos
-              e várias outras pessoas fizeram eu me tornar quem sou hoje.
-            </Text>
-
-            <Text fontSize="lg" align="justify">
-              Atualmente sou formado em Design e sou fotógrafo. Criei também a{" "}
-              <Link
-                href="https://www.instagram.com/quartzo_design/"
-                isExternal
-                fontWeight="500"
-                color="#805AD5"
-              >
-                Quartzo Design
-              </Link>
-              , uma empresa que presta serviço em todo o Sul do Brasil, com 2 anos de mercado,
-              especializada em fotografia ao ar livre e que compartilha com você um pouco dos
-              cliques que faz em um mundo cheio de loucuras.
-            </Text>
-          </Stack>
+      <Flex w="100%" maxW={1680} mx="auto" my="auto" direction="column">
+        <Flex justify="center" position="relative" top="-60px">
+          <Divider h={82} mx="auto" orientation="vertical" position="absolute" />
         </Flex>
-      </HStack>
+
+        <HStack w="100%" h="100%" justify="center" spacing="24" mt="12">
+          <Flex w={420} h={560} position="relative">
+            <Image src="/images/quartzo/jean.jpg" alt="Foto do proprietário" borderRadius={4} />
+
+            <Image
+              src="/images/dots10x.png"
+              w={184}
+              position="absolute"
+              opacity=".5"
+              bottom="-84px"
+              right="-36px"
+              zIndex="-1"
+            />
+
+            <Image
+              src="/images/dots5x.png"
+              w={92}
+              position="absolute"
+              opacity=".5"
+              top="-38px"
+              left="-38px"
+              zIndex="-1"
+            />
+          </Flex>
+
+          <Flex w={575} h={560} align="center">
+            <Flex direction="column">
+              <Text fontSize="5xl" fontWeight="300" lineHeight="shorter" mb="10">
+                Beginning of a photographer's career.
+              </Text>
+
+              <Flex position="relative">
+                <Divider w={90} top="3" left="-64px" position="absolute" />
+              </Flex>
+
+              <Text fontSize="lg" fontWeight="300" align="justify" pl="20">
+                The world of design is ruled by diversity, and it’s good. Another question is
+                whether to consider a lot of pieces of furniture as trash. That’s it is this
+                responsibility — to create things, not junk, — lies on the designer and the
+                company-manufacturer. Bad architecture is even more harmful. If you make an ugly,
+                uncomfortable and expensive chair, then it will be forgotten very quickly, but if
+                you build a terrible building — it will stay for twenty years and make many unhappy.
+              </Text>
+            </Flex>
+          </Flex>
+        </HStack>
+      </Flex>
     </Flex>
   );
 }

@@ -37,21 +37,18 @@ export function HomePage() {
       }}
     >
       <Flex w="100%" maxW={1680} mx="auto" my="auto" direction="column">
-        <Stack ml="64" spacing="8">
+        <Stack ml="48" spacing="8">
           <Text fontSize="7xl" fontWeight="500" pl="10">
             Quartzo Design
           </Text>
 
           <Divider w={160} />
 
-          <Flex fontSize="sm" fontWeight="300" direction="column" pl="10" lineHeight="8" maxW={400}>
-            <Text maxW={400} align="justify">
+          <Flex fontSize="sm" fontWeight="300" lineHeight="8" direction="column" pl="10">
+            <Text maxW={424} align="justify">
               "Guardar os momentos com toda sua emoção e reviver com toda a intensidade. Está é a
               arte de fotografar!"
             </Text>
-            <Flex as="i" justify="flex-end">
-              — Autor desconhecido.
-            </Flex>
           </Flex>
         </Stack>
       </Flex>
