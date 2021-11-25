@@ -44,9 +44,14 @@ export function HomePage() {
 
           <Divider w={160} />
 
-          <Flex fontSize="sm" fontWeight="300" direction="column" pl="10" lineHeight="8">
-            <Text>Guardar os momentos com toda sua emoção e</Text>
-            <Text>reviver com toda a intensidade. Está é a arte de fotografar...</Text>
+          <Flex fontSize="sm" fontWeight="300" direction="column" pl="10" lineHeight="8" maxW={400}>
+            <Text maxW={400} align="justify">
+              "Guardar os momentos com toda sua emoção e reviver com toda a intensidade. Está é a
+              arte de fotografar!"
+            </Text>
+            <Flex as="i" justify="flex-end">
+              — Autor desconhecido.
+            </Flex>
           </Flex>
         </Stack>
       </Flex>
