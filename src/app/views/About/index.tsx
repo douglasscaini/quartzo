@@ -17,8 +17,13 @@ export function About() {
 
         <HStack w="100%" h="100%" justify="center" spacing="24" mt="12">
           <Flex w={420} h={560} position="relative">
-            <Image
-              src="/images/quartzo/jean.jpg"
+            <Flex
+              w={420}
+              h={560}
+              bgImage={`url("/images/quartzo/jean.jpg")`}
+              bgRepeat="no-repeat"
+              bgPosition="center"
+              bgSize="contain"
               alt="Foto do proprietário"
               borderRadius={4}
               opacity=".9"

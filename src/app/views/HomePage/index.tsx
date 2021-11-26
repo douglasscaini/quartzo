@@ -46,8 +46,8 @@ export function HomePage() {
 
           <Flex fontSize="sm" fontWeight="300" lineHeight="8" direction="column" pl="10">
             <Text maxW={424} align="justify">
-              Somos muito mais do que uma empresa de fotografia. Nós capturamos emoções, carinho,
-              olhares, sensibilidade, detalhes e ,claro, o AMOR.
+              Concretizar sonhos, captar momentos, criar experiências, emergir sentimentos e
+              paralisar momentos!
             </Text>
           </Flex>
         </Stack>
