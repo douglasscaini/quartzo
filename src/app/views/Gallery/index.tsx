@@ -12,21 +12,27 @@ export function Gallery({ photos }: HomeProps) {
       style={{
         scrollSnapAlign: "center",
       }}
+      bg="white"
     >
       <Wrap w="100vw" h="100vh" spacing="0">
         {photos.map((photo) => (
-          <WrapItem key={photo.id}>
+          <WrapItem key={photo.id} w="20vw" h="50vh">
             <Flex
               w="20vw"
               h="50vh"
-              opacity=".9"
               bgImage={`url(${photo.src})`}
               bgRepeat="no-repeat"
               bgPosition="center"
-              bgSize="cover"
+              bgSize="contain"
+              zIndex="2"
+              style={{
+                transition: "transform 400ms 0ms easy, z-index 0ms 400ms easy",
+              }}
               _hover={{
                 cursor: "pointer",
-                opacity: "0.5",
+                transform: "scale(1.01)",
+                transition: "transform 400ms 0ms easy, z-index 400ms 0ms easy",
+                zIndex: "1",
               }}
             />
           </WrapItem>
@@ -35,11 +41,3 @@ export function Gallery({ photos }: HomeProps) {
     </Flex>
   );
 }
-
-// function teste (){
-//   const {}
-// }
-// const token =
-//   "IGQVJYT2doSmRubHA5ZA2tDMk5fbWpHTHZASTFIzX09VMGtCQnJHaE1Nd0Q1YTJmYWI5S1hxN3pyN0c0VHJiRGlvaUd0dS1CbkJ5WFkyTHhhNWtBSjJYSFl4My1JcER4MzR3RUZAfMTVwZAXdFQmdlUTR4TQZDZD";
-
-// const url = "https://graph.instagram.com/me/media?access_token=";
