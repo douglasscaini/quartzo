@@ -1,14 +1,12 @@
 import { VStack } from "@chakra-ui/react";
 
-import { GetStaticProps } from "next";
-
 import Head from "next/head";
+import { GetStaticProps } from "next";
 
 import { Header } from "../components/Header";
 import { HomePage } from "../app/views/HomePage";
-import { About } from "../app/views/About";
 import { Gallery } from "../app/views/Gallery";
-import { Contact } from "../app/views/Contact";
+
 import { api } from "../services/api";
 
 type Photos = {
@@ -28,25 +26,45 @@ export default function Home({ photos }: HomeProps) {
         <title>Quartzo Design</title>
       </Head>
 
-      <VStack
-        h="100vh"
-        display="block"
-        overflowY="scroll"
-        overflowX="hidden"
-        style={{
-          scrollSnapType: "y mandatory",
-          scrollBehavior: "smooth",
-        }}
-      >
-        <HomePage />
-        {/* <About /> */}
-        <Gallery photos={photos} />
+      <VStack display="block" overflowX="hidden" spacing="0">
         <Header />
-        {/* <Contact /> */}
+        <HomePage />
+        <Gallery photos={photos} />
       </VStack>
     </>
   );
 }
+
+// import { Header } from "../components/Header";
+// import { About } from "../app/views/About";
+// import { Gallery } from "../app/views/Gallery";
+// import { Contact } from "../app/views/Contact";
+// import { api } from "../services/api";
+
+// export default function Home({ photos }: HomeProps) {
+//   return (
+//     <>
+//       <Head>
+//         <title>Quartzo Design</title>
+//       </Head>
+
+//       <VStack
+//         h="100vh"
+//         display="block"
+//         overflowY="scroll"
+//         overflowX="hidden"
+//         style={{
+//           scrollBehavior: "smooth",
+//         }}
+//       >
+//         <HomePage />
+//         {/* <About /> */}
+//         <Gallery photos={photos} />
+//         {/* <Contact /> */}
+//       </VStack>
+//     </>
+//   );
+// }
 
 type PhotosE = {
   src: string;
