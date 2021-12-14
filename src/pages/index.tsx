@@ -26,7 +26,15 @@ export default function Home({ photos }: HomeProps) {
         <title>Quartzo Design</title>
       </Head>
 
-      <VStack display="block" overflowX="hidden" spacing="0">
+      <VStack
+        h="100vh"
+        display="block"
+        overflowX="hidden"
+        spacing="0"
+        style={{
+          scrollBehavior: "smooth",
+        }}
+      >
         <Header />
         <HomePage />
         <Gallery photos={photos} />
@@ -35,50 +43,12 @@ export default function Home({ photos }: HomeProps) {
   );
 }
 
-// import { Header } from "../components/Header";
-// import { About } from "../app/views/About";
-// import { Gallery } from "../app/views/Gallery";
-// import { Contact } from "../app/views/Contact";
-// import { api } from "../services/api";
-
-// export default function Home({ photos }: HomeProps) {
-//   return (
-//     <>
-//       <Head>
-//         <title>Quartzo Design</title>
-//       </Head>
-
-//       <VStack
-//         h="100vh"
-//         display="block"
-//         overflowY="scroll"
-//         overflowX="hidden"
-//         style={{
-//           scrollBehavior: "smooth",
-//         }}
-//       >
-//         <HomePage />
-//         {/* <About /> */}
-//         <Gallery photos={photos} />
-//         {/* <Contact /> */}
-//       </VStack>
-//     </>
-//   );
-// }
-
-type PhotosE = {
-  src: string;
-};
-
 export const getStaticProps: GetStaticProps = async () => {
-  const token =
-    "IGQVJYT2doSmRubHA5ZA2tDMk5fbWpHTHZASTFIzX09VMGtCQnJHaE1Nd0Q1YTJmYWI5S1hxN3pyN0c0VHJiRGlvaUd0dS1CbkJ5WFkyTHhhNWtBSjJYSFl4My1JcER4MzR3RUZAfMTVwZAXdFQmdlUTR4TQZDZD";
-
   const { data } = await api.get(
     `https://graph.instagram.com/me/media?access_token=IGQVJYT2doSmRubHA5ZA2tDMk5fbWpHTHZASTFIzX09VMGtCQnJHaE1Nd0Q1YTJmYWI5S1hxN3pyN0c0VHJiRGlvaUd0dS1CbkJ5WFkyTHhhNWtBSjJYSFl4My1JcER4MzR3RUZAfMTVwZAXdFQmdlUTR4TQZDZD&fields=media_url,media_type,caption,permalink`
   );
 
-  const photos: any = data.data.map((photo: any) => {
+  const photos = data.data.map((photo: any) => {
     return {
       id: photo.id,
       src: photo.media_url,
