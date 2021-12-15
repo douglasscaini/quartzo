@@ -22,7 +22,7 @@ export function Gallery({ photos }: HomeProps) {
                 }}
                 _hover={{
                   opacity: "0.5",
-                  transform: "scale(1.1, 1.1)",
+                  transform: "scale(1.07, 1.07)",
                 }}
               />
             </WrapItem>
