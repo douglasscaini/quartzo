@@ -25,18 +25,14 @@ export function HomePage() {
   return (
     <Flex
       id="home"
-      w="100vw"
-      h="100%"
-      direction="column"
+      h="100vh"
       bgImage={"url('/images/background.jpg')"}
       bgPosition="center"
       bgSize="cover"
       bgRepeat="no-repeat"
-      style={{
-        scrollSnapAlign: "center",
-      }}
+      direction="column"
     >
-      <Flex w="100%" maxW={1680} mx="auto" my="auto" direction="column">
+      <Flex w="100%" maxW={1680} mx="auto" my="auto">
         <Stack ml="48" spacing="8">
           <Text fontSize="7xl" fontWeight="500" pl="10">
             Quartzo Design
@@ -46,8 +42,8 @@ export function HomePage() {
 
           <Flex fontSize="sm" fontWeight="300" lineHeight="8" direction="column" pl="10">
             <Text maxW={424} align="justify">
-              Somos muito mais do que uma empresa de fotografia. Nós capturamos emoções, carinho,
-              olhares, sensibilidade, detalhes e ,claro, o AMOR.
+              Uma empresa que concretiza sonhos, cria experiências, emerge sentimentos e paralisa
+              momentos!
             </Text>
           </Flex>
         </Stack>

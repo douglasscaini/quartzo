@@ -1,32 +1,32 @@
-import { Flex, Wrap, WrapItem, Image } from "@chakra-ui/react";
+import { Flex, Wrap, WrapItem, Link } from "@chakra-ui/react";
 
-import { photos } from "../../../utils/photos";
+import { HomeProps } from "../../../pages";
 
-export function Gallery() {
+export function Gallery({ photos }: HomeProps) {
   return (
-    <Flex
-      id="gallery"
-      w="100vw"
-      h="100%"
-      style={{
-        scrollSnapAlign: "center",
-      }}
-    >
-      <Wrap w="100vw" h="100vh" spacing="0">
+    <Flex id="gallery" w="100vw" h="100vh">
+      <Wrap spacing="0" w="100%" h="100%">
         {photos.map((photo) => (
-          <WrapItem key={photo.id}>
-            <Image
-              src={photo.src}
-              w="20vw"
-              h="50vh"
-              objectFit="cover"
-              opacity=".9"
-              _hover={{
-                cursor: "pointer",
-                opacity: "0.5",
-              }}
-            />
-          </WrapItem>
+          <Link key={photo.id} href={photo.permalink} isExternal>
+            <WrapItem w="20vw" h="50vh" overflow="hidden">
+              <Flex
+                w="100%"
+                h="100%"
+                bgImage={`url(${photo.media_url})`}
+                bgRepeat="no-repeat"
+                bgPosition="center"
+                bgSize="cover"
+                cursor="pointer"
+                style={{
+                  transition: "all .5s ease-in-out",
+                }}
+                _hover={{
+                  opacity: "0.5",
+                  transform: "scale(1.07, 1.07)",
+                }}
+              />
+            </WrapItem>
+          </Link>
         ))}
       </Wrap>
     </Flex>
