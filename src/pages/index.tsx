@@ -11,8 +11,8 @@ import { api } from "../services/api";
 
 type Photos = {
   id: string;
-  src: string;
-  link: string;
+  media_url: string;
+  permalink: string;
 };
 
 export type HomeProps = {
@@ -45,14 +45,14 @@ export default function Home({ photos }: HomeProps) {
 
 export const getStaticProps: GetStaticProps = async () => {
   const { data } = await api.get(
-    `https://graph.instagram.com/me/media?access_token=IGQVJYT2doSmRubHA5ZA2tDMk5fbWpHTHZASTFIzX09VMGtCQnJHaE1Nd0Q1YTJmYWI5S1hxN3pyN0c0VHJiRGlvaUd0dS1CbkJ5WFkyTHhhNWtBSjJYSFl4My1JcER4MzR3RUZAfMTVwZAXdFQmdlUTR4TQZDZD&fields=media_url,media_type,caption,permalink`
+    `/me/media?access_token=${process.env.INSTAGRAM_API_KEY}&fields=id,media_url,permalink`
   );
 
-  const photos = data.data.map((photo: any) => {
+  const photos = data.data.map((photo: Photos) => {
     return {
       id: photo.id,
-      src: photo.media_url,
-      link: photo.permalink,
+      media_url: photo.media_url,
+      permalink: photo.permalink,
     };
   });
 
