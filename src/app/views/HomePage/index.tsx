@@ -1,9 +1,8 @@
 import {
   Flex,
   Text,
-  Grid,
-  Icon,
   Link,
+  Icon,
   Image,
   Divider,
   Stack,
@@ -12,8 +11,7 @@ import {
   usePrefersReducedMotion,
 } from "@chakra-ui/react";
 
-import { FiChevronDown, FiMenu, FiFacebook } from "react-icons/fi";
-import { FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FiChevronDown } from "react-icons/fi";
 
 const arrowIconAnimation = keyframes`
   0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
@@ -83,55 +81,4 @@ export function HomePage() {
       </Flex>
     </Flex>
   );
-}
-
-{
-  /* <Grid templateColumns="repeat(3, 1fr)" alignItems="center">
-          <Icon as={FiMenu} w={8} h={8} />
-
-          <Flex justify="center">
-            <Image src="/images/logo.png" alt="Logo Quartzo Design" htmlWidth={80} />
-          </Flex>
-
-          <Flex justify="end">
-            <Text fontSize="xl">Contato</Text>
-            <Text fontSize="xl">Contato</Text>
-            <Text fontSize="xl">Contato</Text>
-          </Flex>
-        </Grid>
-
-        <Stack align="center">
-          <Text fontSize="8xl" fontWeight="500">
-            Quartzo Design
-          </Text>
-
-          <Divider w={160} />
-
-          <Flex fontSize="sm" fontWeight="300" lineHeight="8">
-            <Text maxW={432} align="center" mt="4">
-              Uma empresa que realiza sonhos, cria experiências, emerge emoções e paralisa momentos!
-            </Text>
-          </Flex>
-        </Stack>
-
-        <Flex justify="space-between">
-          <Icon as={FiChevronDown} w={8} h={8} animation={animation} />
-
-          <HStack>
-            <Link href="https://www.facebook.com/quartzocn/" isExternal>
-              <Icon as={FiFacebook} w={8} h={8} />
-            </Link>
-
-            <Link href="https://www.instagram.com/quartzo_design/" isExternal>
-              <Icon as={FaInstagram} w={8} h={8} />
-            </Link>
-
-            <Link
-              href="https://api.whatsapp.com/send?phone=554991661452&text=Ol%C3%A1,%20tudo%20bem?"
-              isExternal
-            >
-              <Icon as={FaWhatsapp} w={8} h={8} />
-            </Link>
-          </HStack>
-        </Flex> */
 }
