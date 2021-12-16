@@ -35,9 +35,9 @@ export default function Home({ photos }: HomeProps) {
           scrollBehavior: "smooth",
         }}
       >
-        <Header />
+        {/* <Header /> */}
         <HomePage />
-        <Gallery photos={photos} />
+        {/* <Gallery photos={photos} /> */}
       </VStack>
     </>
   );
