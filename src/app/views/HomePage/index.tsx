@@ -39,8 +39,13 @@ export function HomePage() {
           </Link>
 
           <HStack spacing="8" fontSize="xl">
-            <Text>Início</Text>
-            <Text>Galeria</Text>
+            <Link href="#home">
+              <Text>Início</Text>
+            </Link>
+
+            <Link href="#gallery">
+              <Text>Galeria</Text>
+            </Link>
           </HStack>
         </Flex>
 
