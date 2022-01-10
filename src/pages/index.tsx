@@ -10,6 +10,7 @@ import { Gallery } from "../app/views/Gallery";
 
 import { api } from "../services/api";
 import { Blank } from "../app/views/Blank";
+import { Prices } from "../app/views/Prices";
 
 type Photos = {
   id: string;
@@ -38,9 +39,10 @@ export default function Home({ photos }: HomeProps) {
         }}
       >
         <HomePage />
+        <Gallery photos={photos} />
         <Blank />
         <About />
-        <Gallery photos={photos} />
+        <Prices />
       </VStack>
     </>
   );
