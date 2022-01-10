@@ -9,6 +9,7 @@ import { About } from "../app/views/About";
 import { Gallery } from "../app/views/Gallery";
 
 import { api } from "../services/api";
+import { Blank } from "../app/views/Blank";
 
 type Photos = {
   id: string;
@@ -37,6 +38,7 @@ export default function Home({ photos }: HomeProps) {
         }}
       >
         <HomePage />
+        <Blank />
         <About />
         <Gallery photos={photos} />
       </VStack>
