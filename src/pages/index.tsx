@@ -40,7 +40,6 @@ export default function Home({ photos }: HomeProps) {
       >
         <HomePage />
         <Gallery photos={photos} />
-        <Blank />
         <About />
         <Prices />
       </VStack>

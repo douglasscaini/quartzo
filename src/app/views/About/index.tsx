@@ -1,15 +1,4 @@
-import {
-  Flex,
-  Wrap,
-  WrapItem,
-  Link,
-  VStack,
-  Text,
-  Divider,
-  HStack,
-  Stack,
-  Icon,
-} from "@chakra-ui/react";
+import { Flex, Link, Text, HStack, Stack, Icon } from "@chakra-ui/react";
 
 import { ImInstagram, ImWhatsapp, ImFacebook2 } from "react-icons/im";
 
@@ -25,7 +14,7 @@ export function About() {
       bgRepeat="no-repeat"
     >
       <Flex w="100%" maxW={1680} mx="auto" my="auto" direction="column">
-        <Text fontSize="7xl" fontWeight="500" mb="16">
+        <Text fontSize="7xl" fontWeight="500" pb="16">
           About Me
         </Text>
 
@@ -46,7 +35,7 @@ export function About() {
           </Text>
         </Stack>
 
-        <HStack spacing="8" mt="16">
+        <HStack spacing="8" pt="16">
           <Link
             href="https://www.facebook.com/quartzocn/"
             isExternal

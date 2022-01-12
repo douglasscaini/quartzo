@@ -46,6 +46,10 @@ export function HomePage() {
             <Link href="#gallery">
               <Text>Galeria</Text>
             </Link>
+
+            <Link href="#about">
+              <Text>Sobre</Text>
+            </Link>
           </HStack>
         </Flex>
 
