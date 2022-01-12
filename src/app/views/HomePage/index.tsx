@@ -27,7 +27,7 @@ export function HomePage() {
     <Flex
       id="home"
       h="100vh"
-      bgImage={"url('/images/background.jpg')"}
+      bgImage={"url('/images/backgrounds/home.jpg')"}
       bgPosition="center"
       bgSize="cover"
       bgRepeat="no-repeat"
@@ -56,8 +56,8 @@ export function HomePage() {
 
           <Divider w={160} />
 
-          <Flex fontSize="sm" fontWeight="300" lineHeight="8" pl="10" pt="2">
-            <Text maxW={384} align="justify">
+          <Flex fontSize="md" fontWeight="300" lineHeight="8" pl="10" pt="2">
+            <Text maxW={520} align="justify">
               Uma empresa que realiza sonhos, cria experiências, emerge emoções e paralisa momentos!
             </Text>
           </Flex>
@@ -71,15 +71,15 @@ export function HomePage() {
               <Text>Facebook</Text>
             </Link>
 
-            <Link href="https://www.instagram.com/quartzo_design/" isExternal>
-              <Text>Instagram</Text>
-            </Link>
-
             <Link
               href="https://api.whatsapp.com/send?phone=554991661452&text=Ol%C3%A1,%20tudo%20bem?"
               isExternal
             >
               <Text>Whatsapp</Text>
+            </Link>
+
+            <Link href="https://www.instagram.com/quartzo_design/" isExternal>
+              <Text>Instagram</Text>
             </Link>
           </HStack>
         </Flex>
