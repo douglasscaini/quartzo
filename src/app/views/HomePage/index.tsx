@@ -1,15 +1,17 @@
-import { Flex, Text, Heading, Stack, Icon, HStack } from "@chakra-ui/react";
+import { Flex, Text, Heading, Stack, Icon, HStack, Link } from "@chakra-ui/react";
 
-import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
-import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
 import { UnderlineLink } from "../../../components/UnderlineLink";
+
+import { FaFacebook, FaInstagram, FaWhatsapp, FaRegEnvelope } from "react-icons/fa";
+import { FiFacebook, FiInstagram } from "react-icons/fi";
+import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
 
 export function HomePage() {
   return (
     <Flex w="100%" h="100vh">
       <Flex
         w="45%"
-        bgImage={"url('/images/new/home1.png')"}
+        bgImage={"url('/images/new/woman-one.png')"}
         bgPosition="center"
         bgSize="cover"
         bgRepeat="no-repeat"
@@ -25,30 +27,72 @@ export function HomePage() {
         </Flex>
 
         <Flex direction="column" h="100%">
-          <Flex h="50%">
-            <Stack w="100%" spacing="8">
-              <Heading fontSize="7xl" fontWeight="300" color="#b6effe">
+          <Flex h="40%" justify="space-between">
+            <Stack justify="space-between">
+              <Heading fontSize="6xl" fontWeight="300" color="#b6effe">
                 VICTORIA GAEVSKAYA
               </Heading>
-              <Text maxW="270">
+
+              <Text maxW={272}>
                 Treat yourself and discover your inner beauty in Moscow from 04/24 till 05/11. From
                 55$.
               </Text>
-              <Flex color="#b6effe" fontSize="2xl" align="center">
-                <Heading fontWeight="300">HIRE ME</Heading>
-                <Icon as={BsArrowRight} ml="4" />
-              </Flex>
+
+              <Link
+                w={192}
+                style={{
+                  textDecoration: "none",
+                }}
+                _hover={{
+                  color: "#b6effe",
+                }}
+              >
+                <Flex align="center">
+                  <Heading fontSize="3xl" fontWeight="300">
+                    HIRE ME
+                  </Heading>
+
+                  <Icon as={BsArrowRight} ml="4" w={6} h={6} />
+                </Flex>
+              </Link>
             </Stack>
 
-            <Flex direction="column" justify="space-between" py="4">
-              <Icon as={FaFacebook} w={6} h={6} />
-              <Icon as={FaInstagram} w={6} h={6} />
-              <Icon as={FaWhatsapp} w={6} h={6} />
-              <Icon as={FaWhatsapp} w={6} h={6} />
-            </Flex>
+            <Stack py="2" justify="space-between">
+              <Link
+                _hover={{
+                  color: "#b6effe",
+                }}
+              >
+                <Icon as={FaRegEnvelope} w={6} h={6} />
+              </Link>
+
+              <Link
+                _hover={{
+                  color: "#b6effe",
+                }}
+              >
+                <Icon as={FiFacebook} w={6} h={6} />
+              </Link>
+
+              <Link
+                _hover={{
+                  color: "#b6effe",
+                }}
+              >
+                <Icon as={FiInstagram} w={6} h={6} />
+              </Link>
+
+              <Link
+                _hover={{
+                  color: "#b6effe",
+                }}
+              >
+                <Icon as={FaWhatsapp} w={6} h={6} />
+              </Link>
+            </Stack>
           </Flex>
 
-          <Flex h="50%" align="end" justify="space-between">
+          <Flex h="60%" align="end" justify="space-between">
             <HStack spacing="8">
               <Flex direction="column" color="#b6effe" align="center">
                 <Heading fontWeight="300" fontSize="4xl">
@@ -63,20 +107,21 @@ export function HomePage() {
                 <Icon as={BsArrowRight} w={8} h={8} />
               </Flex>
             </HStack>
-            <HStack spacing="8">
+
+            <HStack spacing="6">
               <Flex
-                w="160px"
-                height="192px"
-                bgImage={"url('/images/new/home1.png')"}
+                w="200px"
+                height="240px"
+                bgImage={"url('/images/new/woman-two.jpg')"}
                 bgPosition="center"
                 bgSize="cover"
                 bgRepeat="no-repeat"
               />
 
               <Flex
-                w="160px"
-                height="192px"
-                bgImage={"url('/images/new/home1.png')"}
+                w="180px"
+                height="220px"
+                bgImage={"url('/images/new/woman-three.jpg')"}
                 bgPosition="center"
                 bgSize="cover"
                 bgRepeat="no-repeat"
