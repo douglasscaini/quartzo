@@ -5,9 +5,12 @@ import { GetStaticProps } from "next";
 
 import { Header } from "../components/Header";
 import { HomePage } from "../app/views/HomePage";
+import { About } from "../app/views/About";
 import { Gallery } from "../app/views/Gallery";
 
 import { api } from "../services/api";
+import { Blank } from "../app/views/Blank";
+import { Prices } from "../app/views/Prices";
 
 type Photos = {
   id: string;
@@ -35,9 +38,10 @@ export default function Home({ photos }: HomeProps) {
           scrollBehavior: "smooth",
         }}
       >
-        <Header />
         <HomePage />
         <Gallery photos={photos} />
+        <About />
+        <Prices />
       </VStack>
     </>
   );
