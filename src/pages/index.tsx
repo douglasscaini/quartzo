@@ -1,16 +1,11 @@
-import { VStack } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 
 import Head from "next/head";
 import { GetStaticProps } from "next";
 
-import { Header } from "../components/Header";
 import { HomePage } from "../app/views/HomePage";
-import { About } from "../app/views/About";
-import { Gallery } from "../app/views/Gallery";
 
 import { api } from "../services/api";
-import { Blank } from "../app/views/Blank";
-import { Prices } from "../app/views/Prices";
 
 type Photos = {
   id: string;
@@ -29,20 +24,9 @@ export default function Home({ photos }: HomeProps) {
         <title>Quartzo Design</title>
       </Head>
 
-      <VStack
-        h="100vh"
-        display="block"
-        overflowX="hidden"
-        spacing="0"
-        style={{
-          scrollBehavior: "smooth",
-        }}
-      >
+      <Flex>
         <HomePage />
-        <Gallery photos={photos} />
-        <About />
-        <Prices />
-      </VStack>
+      </Flex>
     </>
   );
 }

@@ -7,9 +7,10 @@ export default class MyDocument extends Document {
         <Head>
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Cinzel&family=Raleway&display=swap"
             rel="stylesheet"
           />
+
           <link rel="shortcut icon" href="/icons/logo.png" type="image/png" />
         </Head>
         <body>
