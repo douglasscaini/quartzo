@@ -56,35 +56,19 @@ export function HomePage() {
             </Stack>
 
             <Stack py="2" justify="space-between">
-              <Link
-                _hover={{
-                  color: "#b6effe",
-                }}
-              >
+              <Link>
                 <Icon as={FiMail} w={6} h={6} />
               </Link>
 
-              <Link
-                _hover={{
-                  color: "#b6effe",
-                }}
-              >
+              <Link>
                 <Icon as={RiMessengerLine} w={6} h={6} />
               </Link>
 
-              <Link
-                _hover={{
-                  color: "#b6effe",
-                }}
-              >
+              <Link>
                 <Icon as={FaInstagram} w={6} h={6} />
               </Link>
 
-              <Link
-                _hover={{
-                  color: "#b6effe",
-                }}
-              >
+              <Link>
                 <Icon as={FaWhatsapp} w={6} h={6} />
               </Link>
             </Stack>
