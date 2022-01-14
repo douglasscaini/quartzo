@@ -19,7 +19,7 @@ export function HomePage() {
       />
 
       <Flex w="55%" px="8" py="16" direction="column">
-        <Flex w="100%" justify="space-between" mb="36">
+        <Flex w="100%" justify="space-between" mb="32">
           <UnderlineLink text="About me" />
           <UnderlineLink text="Portfolio" />
           <UnderlineLink text="Feedback" />
@@ -110,7 +110,7 @@ export function HomePage() {
             <HStack spacing="6">
               <Flex
                 w="240px"
-                height="320px"
+                h="320px"
                 bgImage={"url('/images/new/woman-two.jpg')"}
                 bgPosition="center"
                 bgSize="cover"
@@ -119,7 +119,7 @@ export function HomePage() {
 
               <Flex
                 w="240px"
-                height="320px"
+                h="320px"
                 bgImage={"url('/images/new/woman-three.jpg')"}
                 bgPosition="center"
                 bgSize="cover"

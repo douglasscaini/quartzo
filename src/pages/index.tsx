@@ -4,6 +4,7 @@ import Head from "next/head";
 import { GetStaticProps } from "next";
 
 import { HomePage } from "../app/views/HomePage";
+import { Footer } from "../app/views/Footer";
 
 import { api } from "../services/api";
 
@@ -24,8 +25,9 @@ export default function Home({ photos }: HomeProps) {
         <title>Quartzo Design</title>
       </Head>
 
-      <Flex>
+      <Flex direction="column">
         <HomePage />
+        <Footer />
       </Flex>
     </>
   );
