@@ -17,7 +17,7 @@ export function About() {
       <Heading mt="24" fontSize="250px" fontWeight="300" color="#262626" position="absolute">
         INSPIRE
       </Heading>
-      <Flex w="100%" maxW={1440} mx="auto" mt="32">
+      <Flex w="100%" maxW={1360} mx="auto" mt="32">
         <Flex w="100%" justify="space-between">
           <Flex w="50%" h="100%" margin="auto" direction="column">
             <Stack w="100%" spacing="8" justify="center">

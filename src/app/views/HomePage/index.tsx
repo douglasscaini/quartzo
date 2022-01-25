@@ -9,17 +9,9 @@ import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
 
 import { useState } from "react";
 
-const array1 = [
-  "/images/new/woman-one.png",
-  "/images/new/woman-two.jpg",
-  "/images/new/woman-three.jpg",
-];
+const array1 = ["/images/new/imagem1.jpg", "/images/new/imagem2.jpg", "/images/new/imagem3.jpg"];
 
-const array2 = [
-  "/images/new/woman-three.jpg",
-  "/images/new/woman-one.png",
-  "/images/new/woman-two.jpg",
-];
+const array2 = ["/images/new/imagem3.jpg", "/images/new/imagem1.jpg", "/images/new/imagem2.jpg"];
 
 export function HomePage() {
   const [photos, setPhotos] = useState(array1);
@@ -48,18 +40,18 @@ export function HomePage() {
 
       <Flex w="55%" px="8" py="16" direction="column">
         <Flex w="100%" justify="space-between" mb="32">
-          <UnderlineLink text="About me" />
+          <UnderlineLink text="Sobre" />
           <UnderlineLink text="Portfolio" />
           <UnderlineLink text="Feedback" />
-          <UnderlineLink text="Prices" />
-          <UnderlineLink text="+7 985 086-80-40" />
+          <UnderlineLink text="Pacotes" />
+          <UnderlineLink text="Minha Conta" />
         </Flex>
 
         <Flex direction="column" h="100%">
           <Flex h="40%" justify="space-between">
             <Stack justify="space-between">
               <Heading fontSize="6xl" fontWeight="300" color="#b6effe">
-                VICTORIA GAEVSKAYA
+                QUARTZO DESIGN
               </Heading>
 
               <Text maxW={272}>

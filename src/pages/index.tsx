@@ -5,6 +5,7 @@ import { GetStaticProps } from "next";
 
 import { HomePage } from "../app/views/HomePage";
 import { About } from "../app/views/About";
+import { Gallery } from "../app/views/Gallery";
 import { Footer } from "../app/views/Footer";
 
 import { api } from "../services/api";
@@ -26,9 +27,10 @@ export default function Home({ photos }: HomeProps) {
         <title>Quartzo Design</title>
       </Head>
 
-      <Flex direction="column">
+      <Flex direction="column" overflowX="hidden">
         <HomePage />
         <About />
+        <Gallery photos={photos} />
         <Footer />
       </Flex>
     </>
@@ -48,9 +50,9 @@ export const getStaticProps: GetStaticProps = async () => {
     };
   });
 
-  if (photos.length > 10) {
-    photos.length = 10;
-  }
+  // if (photos.length > 10) {
+  //   photos.length = 10;
+  // }
 
   return {
     props: { photos },
