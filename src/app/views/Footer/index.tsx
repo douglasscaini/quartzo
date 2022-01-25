@@ -9,13 +9,13 @@ import { RiMessengerLine } from "react-icons/ri";
 export function Footer() {
   return (
     <Flex w="100%" h={320} bg="#000000">
-      <Flex w="100%" maxW={1600} mx="auto" my="auto" align="center" justify="space-between">
+      <Flex w="100%" maxW={1440} mx="auto" my="auto" align="center" justify="space-between">
         <Text>Portfolio</Text>
         <Text>Services & Prices</Text>
         <Text>Contact</Text>
 
         <VStack>
-          <Heading color="#b6effe">Quartzo Design</Heading>
+          <Heading color="#b6effe">QUARTZO DESIGN</Heading>
         </VStack>
 
         <HStack spacing="8">

@@ -4,6 +4,7 @@ import Head from "next/head";
 import { GetStaticProps } from "next";
 
 import { HomePage } from "../app/views/HomePage";
+import { About } from "../app/views/About";
 import { Footer } from "../app/views/Footer";
 
 import { api } from "../services/api";
@@ -27,6 +28,7 @@ export default function Home({ photos }: HomeProps) {
 
       <Flex direction="column">
         <HomePage />
+        <About />
         <Footer />
       </Flex>
     </>
