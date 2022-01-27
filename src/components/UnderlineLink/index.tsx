@@ -7,9 +7,7 @@ type UnderlineLinkProps = {
 export function UnderlineLink({ text }: UnderlineLinkProps) {
   return (
     <Link
-      style={{
-        position: "relative",
-      }}
+      position="relative"
       _hover={{
         _after: {
           width: "70%",

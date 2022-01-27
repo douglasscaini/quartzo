@@ -9,20 +9,15 @@ import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
 
 import { useState } from "react";
 
-const array1 = ["/images/new/imagem1.jpg", "/images/new/imagem2.jpg", "/images/new/imagem3.jpg"];
+const array1 = ["/images/home/image-1.jpg", "/images/home/image-2.jpg", "/images/home/image-3.jpg"];
 
-const array2 = ["/images/new/imagem3.jpg", "/images/new/imagem1.jpg", "/images/new/imagem2.jpg"];
+const array2 = ["/images/home/image-4.jpg", "/images/home/image-5.jpg", "/images/home/image-6.jpg"];
 
 export function HomePage() {
   const [photos, setPhotos] = useState(array1);
-  console.log(photos[0]);
 
-  function handlePhotos1() {
-    setPhotos(array1);
-  }
-
-  function handlePhotos2() {
-    setPhotos(array2);
+  function handleChangePhotos(photosListHome: string[]) {
+    setPhotos(photosListHome);
   }
 
   return (
@@ -100,7 +95,7 @@ export function HomePage() {
                 <Button
                   fontWeight="300"
                   fontSize="4xl"
-                  onClick={handlePhotos1}
+                  onClick={() => handleChangePhotos(array1)}
                   bg="transparent"
                   _hover={{
                     bg: "transparent",
@@ -115,7 +110,7 @@ export function HomePage() {
                 <Button
                   fontWeight="300"
                   fontSize="2xl"
-                  onClick={handlePhotos2}
+                  onClick={() => handleChangePhotos(array2)}
                   bg="transparent"
                   _hover={{
                     bg: "transparent",
