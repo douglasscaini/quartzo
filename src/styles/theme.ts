@@ -2,14 +2,14 @@ import { extendTheme } from "@chakra-ui/react";
 
 export const theme = extendTheme({
   fonts: {
-    heading: "Poppins",
-    body: "Poppins",
+    heading: "Cinzel",
+    body: "Raleway",
   },
   styles: {
     global: {
       body: {
         bg: "#1d1d1d",
-        color: "#FFFFFF",
+        color: "#9c9c9c",
       },
     },
   },
