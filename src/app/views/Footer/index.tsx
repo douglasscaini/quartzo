@@ -9,12 +9,12 @@ import { RiMessengerLine } from "react-icons/ri";
 export function Footer() {
   return (
     <Flex w="100%" h={320} bg="#000000">
-      <Flex w="100%" maxW={1440} mx="auto" my="auto" align="center" justify="space-between">
-        <Text>Portfolio</Text>
-        <Text>Services & Prices</Text>
-        <Text>Contact</Text>
+      <Flex w="100%" maxW={1440} mx="auto" align="center" justify="space-between">
+        <UnderlineLink text="Portfolio" />
+        <UnderlineLink text="Services & Prices" />
+        <UnderlineLink text="Contact" />
 
-        <VStack>
+        <VStack spacing="8">
           <Heading color="#b6effe">QUARTZO DESIGN</Heading>
         </VStack>
 
@@ -36,7 +36,7 @@ export function Footer() {
           </Link>
         </HStack>
 
-        <Text>+7 985 086-80-40</Text>
+        <Text>(49) 99114-7537</Text>
       </Flex>
     </Flex>
   );

@@ -1,4 +1,8 @@
-import { Flex, Text, Heading, Stack, Icon, HStack, Link, Button } from "@chakra-ui/react";
+const array1 = ["/images/home/image-1.jpg", "/images/home/image-2.jpg", "/images/home/image-3.jpg"];
+const array2 = ["/images/home/image-4.jpg", "/images/home/image-5.jpg", "/images/home/image-6.jpg"];
+
+import { Flex, Text, Heading, Stack, Icon, HStack, Link } from "@chakra-ui/react";
+import { useState } from "react";
 
 import { UnderlineLink } from "../../../components/UnderlineLink";
 
@@ -7,17 +11,11 @@ import { FiMail } from "react-icons/fi";
 import { RiMessengerLine } from "react-icons/ri";
 import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
 
-import { useState } from "react";
-
-const array1 = ["/images/home/image-1.jpg", "/images/home/image-2.jpg", "/images/home/image-3.jpg"];
-
-const array2 = ["/images/home/image-4.jpg", "/images/home/image-5.jpg", "/images/home/image-6.jpg"];
-
 export function HomePage() {
-  const [photos, setPhotos] = useState(array1);
+  const [photos, setPhotos] = useState<string[]>(array1);
 
-  function handleChangePhotos(photosListHome: string[]) {
-    setPhotos(photosListHome);
+  function handleChangePhotos(photosList: string[]) {
+    setPhotos(photosList);
   }
 
   return (
@@ -28,36 +26,37 @@ export function HomePage() {
         bgPosition="center"
         bgSize="cover"
         bgRepeat="no-repeat"
-        style={{
-          transition: "background-image 1s ease-in-out",
-        }}
+        transition="background-image 1s ease-in-out"
       />
 
       <Flex w="55%" px="8" py="16" direction="column">
-        <Flex w="100%" justify="space-between" mb="32">
+        <Flex justify="space-between" mb="32">
           <UnderlineLink text="Sobre" />
           <UnderlineLink text="Portfolio" />
           <UnderlineLink text="Feedback" />
           <UnderlineLink text="Pacotes" />
-          <UnderlineLink text="Minha Conta" />
+          <UnderlineLink text="(49) 99114-7537" />
         </Flex>
 
-        <Flex direction="column" h="100%">
-          <Flex h="40%" justify="space-between">
+        <Flex h="100%" direction="column">
+          <Flex h="35%" justify="space-between">
             <Stack justify="space-between">
               <Heading fontSize="6xl" fontWeight="300" color="#b6effe">
                 QUARTZO DESIGN
               </Heading>
 
-              <Text maxW={272}>
-                Treat yourself and discover your inner beauty in Moscow from 04/24 till 05/11. From
-                55$.
+              <Text maxW={256}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
               </Text>
 
               <Link
                 w={192}
+                transition="filter 0.2s"
                 style={{
                   textDecoration: "none",
+                }}
+                _hover={{
+                  filter: "drop-shadow(0 0 0.25rem #b6effe)",
                 }}
               >
                 <Flex align="center" color="#b6effe">
@@ -89,39 +88,38 @@ export function HomePage() {
             </Stack>
           </Flex>
 
-          <Flex h="60%" align="end" justify="space-between">
+          <Flex h="65%" align="end" justify="space-between">
             <HStack spacing="8">
-              <Flex direction="column" align="center" color="#b6effe">
-                <Button
-                  fontWeight="300"
-                  fontSize="4xl"
-                  onClick={() => handleChangePhotos(array1)}
-                  bg="transparent"
-                  _hover={{
-                    bg: "transparent",
-                  }}
-                >
-                  01
-                </Button>
+              <Flex
+                direction="column"
+                align="center"
+                color="#b6effe"
+                onClick={() => handleChangePhotos(array1)}
+                cursor="pointer"
+                transition="filter 0.2s"
+                _hover={{
+                  filter: "drop-shadow(0 0 0.25rem #b6effe)",
+                }}
+              >
+                <Text fontSize="4xl">01</Text>
                 <Icon as={BsArrowLeft} w={8} h={8} />
               </Flex>
 
-              <Flex direction="column" h="100%" align="center" alignSelf="flex-end">
-                <Button
-                  fontWeight="300"
-                  fontSize="2xl"
-                  onClick={() => handleChangePhotos(array2)}
-                  bg="transparent"
-                  _hover={{
-                    bg: "transparent",
-                  }}
-                >
-                  02
-                </Button>
+              <Flex
+                direction="column"
+                align="center"
+                color="#b6effe"
+                onClick={() => handleChangePhotos(array2)}
+                cursor="pointer"
+                transition="filter 0.2s"
+                _hover={{
+                  filter: "drop-shadow(0 0 0.25rem #b6effe)",
+                }}
+              >
+                <Text fontSize="4xl">02</Text>
                 <Icon as={BsArrowRight} w={8} h={8} />
               </Flex>
             </HStack>
-
             <HStack spacing="6">
               <Flex
                 w="240px"

@@ -50,9 +50,9 @@ export const getStaticProps: GetStaticProps = async () => {
     };
   });
 
-  // if (photos.length > 10) {
-  //   photos.length = 10;
-  // }
+  if (photos.length > 24) {
+    photos.length = 24;
+  }
 
   return {
     props: { photos },
