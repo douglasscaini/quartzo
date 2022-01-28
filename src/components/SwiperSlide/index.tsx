@@ -12,7 +12,7 @@ import { HomeProps } from "../../pages";
 
 export function SwiperSlideComponent({ photos }: HomeProps) {
   return (
-    <Swiper slidesPerView={4} slidesPerGroup={4} spaceBetween={0} freeMode={true} navigation={true}>
+    <Swiper slidesPerView={3} slidesPerGroup={3} spaceBetween={0} freeMode={true} navigation={true}>
       {photos.map((photo) => (
         <SwiperSlide key={photo.id}>
           <Flex

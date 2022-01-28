@@ -6,6 +6,7 @@ import { GetStaticProps } from "next";
 import { HomePage } from "../app/views/HomePage";
 import { About } from "../app/views/About";
 import { Gallery } from "../app/views/Gallery";
+import { Working } from "../app/views/Working";
 import { Footer } from "../app/views/Footer";
 
 import { api } from "../services/api";
@@ -31,6 +32,7 @@ export default function Home({ photos }: HomeProps) {
         <HomePage />
         <About />
         <Gallery photos={photos} />
+        <Working />
         <Footer />
       </Flex>
     </>
