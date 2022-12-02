@@ -13,7 +13,7 @@
 
 ## :speech_balloon: Sobre <a name="about"></a>
 
-> [Quartzo](quartzodesign.vercel.app) é um esboço de um possível portfólio para fotógrafos.
+> [Quartzo](https://quartzodesign.vercel.app/) é um esboço de um possível portfólio para fotógrafos.
 
 <br />
 <table>
